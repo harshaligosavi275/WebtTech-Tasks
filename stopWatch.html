@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stopWatch.css">
+</head>
+
+<body>
+    <div id="frame">
+        <span id="hr">00<sub>hr</sub></span> : <span id="min">00<sub>min</sub></span> : <span id="sec">00<sub>sec</sub></span>
+    </div>
+     <br>
+    <div class="frame1">
+    <button onclick="start()" id="b1">START</button>
+    <button onclick="stop()" id="b2">STOP</button>
+    <button onclick="reset()" id="b3">RESET</button>
+   </div>
+
+   <!-- --------------------------------------------------------------- -->
+    <script>
+        let hour = document.getElementById("hr"); 
+        let minute = document.getElementById("min");
+        let second = document.getElementById("sec");
+
+          
+        let h=0;
+        let s=0;
+        let m=0;
+        let start1;
+
+        function start()
+        {
+            
+            start1 =  setInterval(()=>
+            {
+
+               if(s<9)
+               {
+                    second.innerHTML = "0" + ++s;
+               }
+               else
+               {
+                    second.innerHTML = ++s ;
+                    if(s==60)
+                    {
+                         s=0;
+                        if(m<9)
+                       {
+                             minute.innerHTML = "0"+ ++m ;
+                       }
+                       else
+                       {
+                             minute.innerHTML = ++m ;
+                             if(m==60)
+                             {
+                                  m=0;
+                                  if(h<9)
+                                  {
+                                      hour.innerHTML= "0" + ++h ;
+                                  }
+                                 else
+                                 {
+                                     hour.innerHTML= ++h ;
+                                     if(h>=12){
+                                       h=0;
+                                     }
+                                     
+                                 }
+                            }   
+                       }
+                   
+                
+                    } 
+                }
+
+            },1000)
+        
+        }
+ 
+
+
+        function stop(){
+           clearInterval(start1)
+        }
+
+        function reset(){
+           s=0;
+           h=0;
+           m=0;
+           if(s==0 && h==0 && m==0){
+             second.innerHTML="00";
+             minute.innerHTML="00";
+             hour.innerHTML="00";
+           }
+
+         }
+
+          
+    
+    </script>
+</body>
+</html>
