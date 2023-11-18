@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" type="text/css" href="./all.css">
+    <link rel="stylesheet" type="text/css" href="./all.min.css">
+    <style>
+        body{
+            background-image: url(./IMAGE/M31_09-01-2011_\(cropped\).jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 10px 10px 10px ;
+        } 
+       .parent{
+        height:460px;
+        width:700px;
+        /* border:1px solid white; */
+        margin: auto;
+        margin-top: 170px;
+       }
+       .parent .box{
+        height:70px;
+        width:700px;
+        /* border:1px solid white; */
+        margin:auto;
+        margin-top: 10px;
+     }
+    .parent #box1{
+        /* color:#ffffff; */
+        height:100px;
+        font-size: 6em;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        /* background-image: linear-gradient(red,yellow,green); */
+        text-align: center;
+        line-height: 70px;
+        background-image: url(./IMAGE/dolphin-sunset-cruise.jpg);
+        
+     }
+     .parent #box2{
+        height:40px;
+        width:650px;
+        /* border:1px solid; */
+        margin:auto;
+        border-radius: 50px;
+        background-color: white;
+        line-height: 27px;
+        padding:4px;
+     }
+     /* ........................................................... */
+       #box2 #img{
+        height:30px;
+        width:30px;
+        border:none;
+        margin-left: 10px;
+    } 
+     .parent .box #input{
+        height:30px;
+        width:500px;
+        border:none;
+        outline: none;
+        margin-left:10px;
+        color:rgb(93, 91, 91);
+     }
+     .parent #box3{
+        height:250px;
+        width:550px;
+        /* border:1px solid white; */
+        display: flex;
+        flex-wrap: wrap;
+        
+     }
+    .parent #box3 .container{
+        height: 100px;
+        width:100px;
+        margin-left: 10px;
+        /* border:1px solid white; */
+    }
+    .container:hover{
+        background-color:rgba(185, 182, 183, 0.244);
+     }
+    .container .icon{
+        height:50px;
+        width:50px;
+        /* border:1px solid black; */
+        border-radius: 50%;
+        background-color:black;
+        margin: auto;
+        margin-top: 20px;
+        
+    }
+    .container .icon #youtube{
+        color:red;
+        font-size: 30px;
+        line-height: 35px;
+        padding:7.5px;
+    }
+    .container .icon #twitter{
+        color:rgb(0, 119, 255);
+        font-size: 30px;
+        line-height: 35px;
+        padding:7.5px;
+    }
+    .container .icon #instagram{
+        color:rgb(255, 0, 255);
+        font-size: 32px;
+        line-height: 35px;
+        padding:8.5px;
+    }
+    .container .icon #facebook{
+        color:blue;
+        font-size: 32px;
+        line-height: 35px;
+        padding:8px;
+    }
+    .container .icon #Whatsapp{
+        color:green;
+        /* border-radius: 50%; */
+        font-size: 32px;
+        line-height: 35px;
+        padding:8px;
+        
+    }
+    .container .icon #java{
+        color:red;
+        font-size: 32px;
+        text-align: center;
+        padding: 9px;
+    }
+    
+    .container .icon #newspaper{
+        color:white;
+        font-size: 32px;
+        text-align: center;
+        padding: 9px;
+    }
+
+    .container .icon #linkedin{
+        color:blue;
+        font-size: 32px;
+        text-align: center;
+        padding: 9px;
+    }
+
+    .container .icon #html{
+        background-image: linear-gradient(red,orange);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-size: 35px;
+        text-align: center;
+        padding: 9px;
+    }
+
+    .container .icon #shortcut{
+        color:wheat;
+        font-size: 36px;
+        text-align: center;
+        line-height: 50px;
+        padding: 10px;
+    }
+
+    .container .icon a{
+        text-decoration: none;
+        color:white;
+        line-height: 30px;
+    }
+
+     .parent .sidebar{
+        height:30px;
+        width:200px;
+        /* border:1px solid blue; */
+        margin-left: 950px;
+        position: absolute;
+        top:30px;
+        display: flex;
+        justify-content:space-evenly;
+     }
+     .parent .sidebar a{
+         color:white;
+     }
+     </style>
+</head>
+<body>
+    <main class="parent">
+
+        <div class="sidebar">
+           <a href="https://gmail.com" target="_blank">Gmail</a>
+           <a href="https://www.google.co.in/imghp?hl=en&tab=ri&ogbl" target="_blank">Images</a>
+           <a href="https://play.google.com/store/apps?hl=en_IN&gl=US" target="_blank">Google Apps</a>
+        </div>
+              <div class="box" id="box1">Google</div>
+
+                
+              <div class="box" id="box2"><img src="./IMAGE/magnifying-glass-search-icon-flat-260nw-738763579.webp" alt="image not found" id="img">
+                <input type="text" placeholder="Search Google or type a URL" id="input"><img src="./IMAGE/7611756.png" alt="image not found" id="img"></div>
+                
+
+             <div class="box" id="box3">
+                <div class="container" id="container1">
+                  <div class="icon" title="YouTube"><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube" id="youtube"></i>YouTube</a></div>
+                </div>
+
+                <div class="container" id="container2">
+                    <div class="icon" title="Twitter"><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter" id="twitter"></i>Twitter</a></div>
+                </div>
+                
+                <div class="container" id="container3">
+                   <div class="icon" title="Instagram"><a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram" id="instagram"></i>Instagram</a></div>
+                </div>
+
+                <div class="container" id="container4">
+                    <div class="icon" title="Facebook"><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook" id="facebook"></i>Facebook</a></div>
+                </div>
+
+                <div class="container" id="container5">
+                    <div class="icon" title="Whatsapp"><a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp" id="Whatsapp"></i>Whatsapp</a></div>
+                </div>
+                <!-- ............................. -->
+                
+
+                <div class="container" id="container1">
+                    <div class="icon" title="JAVA"><a href="https://www.java.com/en/"><i class="fa-brands fa-java" id="java"></i>Java</a></div>
+                  </div>
+  
+                  <div class="container" id="container2">
+                      <div class="icon" title="Newspaper"><a href="https://www.lokmat.com/"><i class="fa-solid fa-newspaper" id="newspaper"></i>Newspaper</a></div>
+                  </div>
+                  
+                  <div class="container" id="container3">
+                     <div class="icon" title="Linkedin"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin" id="linkedin"></i>Linkedin</a></div>
+                  </div>
+  
+                  <div class="container" id="container4">
+                      <div class="icon" title="HTML5"><a href=""><i class="fa-brands fa-html5" id="html"></i>HTML5</a></div>
+                  </div>
+  
+                  <div class="container" id="container5">
+                      <div class="icon" title="Add shortcut"><a href=""><i class="fa-thin fa-plus" id="shortcut"></i></a></div>
+                  </div>
+        </div>
+                
+    </main>
+   
+</body>
+</html>
