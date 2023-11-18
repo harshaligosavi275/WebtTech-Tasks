@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reactange.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="rect"></div>
+
+    <script>
+        let ele = document.getElementById("rect");
+
+       ele.addEventListener("mousemove", function (details){
+             let reactLoc = ele.getBoundingClientRect();
+            //  console.log(details.clientX);        //mouse ki location (details.clientx) 
+            let insideReact =  details.clientX - reactLoc.left ;   //minus mouse location from reactangle ke left se
+
+            if(insideReact < reactLoc.width/2){
+                let red =  gsap.utils.mapRange(0, reactLoc.width/2,255,0, insideReact)
+                gsap.to(ele, {
+                    backgroundColor: `rgb(${red},0,0)`,
+                    ease:Power4 ,
+                })
+            }
+            else{
+                 
+                let blue =  gsap.utils.mapRange(reactLoc.width/2, reactLoc.width ,0, 255, insideReact)
+                gsap.to(ele, {
+                    backgroundColor: `rgb(0,0,${blue})`,
+                    ease:Power4 ,
+                })
+            }
+             
+             
+       })
+
+
+       ele.addEventListener("mouseleave", function(){
+          gsap.to(ele,{
+            backgroundColor:"white"
+          })
+       })
+    </script>
+
+    
+</body>
+</html>
+
+<!--  ele.getBoundingClientRect():-  reactangle ki location-->
+
+<!-- gsap.utils.mapRange(0, 100, 0, 500, 50); 
+1)inputmin
+2)inputmax
+3)outmin
+4)outmax
+5)valuetomap -->
