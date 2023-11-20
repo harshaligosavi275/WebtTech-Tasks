@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card UI</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "poppins", sans-serif;
+        box-sizing: border-box;
+        color: white;
+      }
+      .card_frame {
+        height: 300px;
+        width: 500px;
+        /* border:1px solid; */
+        background-image: url("./istockphoto-1346213885-612x612.jpg");
+        border-radius: 30px;
+        position: absolute;
+        top: 200px;
+        left: 500px;
+        box-shadow: 4px 4px 4px black;
+      }
+      .logo_card_sim {
+        height: 100px;
+        width: 500px;
+        /* border:1px solid white; */
+        position: absolute;
+        top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .logo {
+        height: 70px;
+        width: 100px;
+        /* border:1px solid; */
+        background-image: url("./Mastercard_logo.0-removebg-preview\ \(1\).png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .title {
+        height: 70px;
+        width: 150px;
+        /* border:1px solid; */
+        text-align: center;
+        line-height: 60px;
+        position: relative;
+        right: 90px;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+      .chip {
+        height: 70px;
+        width: 100px;
+        position: relative;
+        right: 10px;
+        /* border:1px solid; */
+        background-image: url("./sim-card-chip-for-use-in-digital-communication-vector-removebg-preview.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .card_details {
+        height: 150px;
+        width: 500px;
+        /* border:1px solid blue; */
+        position: relative;
+        top: 130px;
+        padding: 20px;
+      }
+      h5 {
+        font-size: 20px;
+        padding: 2px;
+      }
+      h3 {
+        letter-spacing: 5px;
+        padding: 2px;
+      }
+      h4 {
+        font-size: 20px;
+        padding: 30px;
+        position: absolute;
+        left: 3px;
+      }
+      .validity {
+        height: 50px;
+        width: 120px;
+        /* border: 1px solid white; */
+        position: relative;
+        left: 350px;
+        padding: 9px;
+      }
+      #val,span {
+        letter-spacing: 1px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card_frame">
+      <div class="logo_card_sim">
+        <div class="logo"></div>
+        <div class="title">Master Card</div>
+        <div class="chip"></div>
+      </div>
+
+      <div class="card_details">
+        <h5>Card Number</h5>
+        <h3>8050 5030 2030 3020</h3>
+        <h4>Harshali Hanumant Gosavi</h4>
+        <div class="validity">
+          <span id="val">Valid Thru</span><br />
+          <span><b>05/28</b></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
