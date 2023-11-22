@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> simple Slider</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            text-shadow: 2px 2px 2px blue;
+            font-size: 60px;
+            text-decoration: underline;
+        }
+        .slider{
+           height: 400px;
+           width: 60%;
+           position: relative;
+           left: 20%;
+           top: 30px;
+           background-image: url("./unnamed.webp");
+           /* background-repeat: no-repeat;
+           background-size: cover; */
+           border: 2px solid;
+           background-size: 100% 100%;
+           box-shadow: 2px 1px 10px 4px white;
+           animation: slider 9s infinite linear;
+        }
+        @keyframes slider {
+            0%{
+                background-image: url("./unnamed.webp");
+            }
+            35%{
+               background-image: url("./1693246042-938.avif");
+            }
+            75%{
+                 background-image: url("./images.jpg");
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Image slider</h1>
+    <div class="slider"></div>
+</body>
+</html>
